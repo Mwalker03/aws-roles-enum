@@ -21,7 +21,7 @@ Table of Contents
     Contributing
     License
 
-Features
+# Features
 
   Audit IAM User Policies: Lists all managed and inline policies attached to the current IAM user.
   Highlight Potentially Sensitive Actions: Scans policies for actions that are considered sensitive and could lead to privilege escalation.
@@ -29,13 +29,13 @@ Features
   Customizable Action List: Allows users to define their own list of actions to search for.
   Supports AWS Profiles: Can use different AWS profiles configured in your AWS credentials file.
 
-Requirements
+# Requirements
 
-  Python 3.6 or higher
-  boto3 library
-  AWS credentials configured (either via environment variables or AWS credentials file)
+    Python 3.6 or higher
+    boto3 library
+    AWS credentials configured (either via environment variables or AWS credentials file)
 
-Installation
+**# Installation**
 
   # Clone the Repository
 
@@ -50,12 +50,12 @@ Installation
     source venv/bin/activate  # On Windows use: venv\Scripts\activate
     pip install boto3
 
-Usage
+# Usage
 
       python iam_policy_checker.py [options]
 
-  Basic Usage*
-  # Run the script without any options to audit the current IAM user's policies:
+  **Basic Usage**
+  Run the script without any options to audit the current IAM user's policies:
 
     python iam_policy_checker.py
 
@@ -64,19 +64,19 @@ Usage
 
     python iam_policy_checker.py --profile your_profile_name
 
-  Check for a Specific Command or Action
+  **Check for a Specific Command or Action**
     You can check if a specific AWS command or action exists in your attached policies:
 
     python iam_policy_checker.py --command s3:PutObject
 
 
-Examples
+# Examples
 
-  Audit Current IAM User Policies
+  **Audit Current IAM User Policies**
 
     python iam_policy_checker.py
 
-  Sample Output:
+  **Sample Output:**
 
     Current IAM User: alice
     Attached Policies (2):
@@ -100,11 +100,11 @@ Examples
       - iam:DeleteUser      # Highlighted in red
       - s3:PutObject
     
-  Check for a Specific Action
+  **Check for a Specific Action**
 
     python iam_policy_checker.py --command iam:DeleteUser
 
-  Sample Output:
+  **Sample Output:**
 
     Current IAM User: alice
     Attached Policies (2):
@@ -122,13 +122,13 @@ Examples
 
     The command/action 'iam:DeleteUser' exists in one or more attached policies.
 
-Customization
+# Customization
   Modify the List of Sensitive Actions
 
   The script contains a predefined list of actions (actions_to_search) 
   that are considered sensitive. You can modify this list to suit your needs.
 
-  Example:
+  **Example:**
 
     actions_to_search = [
         "iam:CreateUser",
@@ -137,12 +137,12 @@ Customization
         # Add or remove actions as needed
     ]
 
-  Change Highlight Colors
+  **Change Highlight Colors**
 
   The script uses ANSI escape codes to highlight matching actions. 
   You can customize the colors by modifying the ANSI codes at the top of the script.
 
-  Example:
+  **Example:**
   
     # Define ANSI color codes
     RESET = "\033[0m"
@@ -150,14 +150,14 @@ Customization
     GREEN = "\033[32m"  # Change to "\033[34m" for blue
     RED = "\033[31m"
     
-License
+# License
 
   This project is licensed under the GNU General Public License v3.0 (GPLv3) License. 
   See the LICENSE file for details.
 
-Disclaimer 
+# Disclaimer 
   
-  This tool is intended for educational and security auditing purposes within your own AWS environments. 
+  **This tool is intended for educational and security auditing purposes within your own AWS environments. 
   Always ensure you have the appropriate permissions before running security assessment tools. 
   Unauthorized access or use of systems is prohibited.
-  
+**  
