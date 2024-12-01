@@ -1,5 +1,5 @@
 # Aws-Roles-Enum
-IAM Policy Checker
+**IAM Policy Checker**
 
 An AWS IAM Policy Checker script to help users 
 audit their AWS IAM policies, identify potential security risks, 
@@ -7,7 +7,7 @@ and highlight permissions that could lead to privilege escalation.
 This tool is designed to assist in securing AWS environments by making 
 it easier to understand the permissions granted to IAM users.
 
-Table of Contents
+# Table of Contents
 
     Features
     Requirements
