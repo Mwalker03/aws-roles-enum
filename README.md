@@ -1,4 +1,4 @@
-# aws-roles-enum
+# Aws-Roles-Enum
 IAM Policy Checker
 
 An AWS IAM Policy Checker script to help users 
@@ -52,7 +52,7 @@ Installation
 
 Usage
 
-  python iam_policy_checker.py [options]
+      python iam_policy_checker.py [options]
 
   Basic Usage*
   # Run the script without any options to audit the current IAM user's policies:
@@ -60,12 +60,12 @@ Usage
     python iam_policy_checker.py
 
   **Specify an AWS Profile**
-  # If you have multiple AWS profiles configured, you can specify which one to use:
+   If you have multiple AWS profiles configured, you can specify which one to use:
 
     python iam_policy_checker.py --profile your_profile_name
 
   Check for a Specific Command or Action
-  # You can check if a specific AWS command or action exists in your attached policies:
+    You can check if a specific AWS command or action exists in your attached policies:
 
     python iam_policy_checker.py --command s3:PutObject
 
